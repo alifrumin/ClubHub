@@ -47,8 +47,8 @@ class MeetingsController < ApplicationController
 	end
 
 	def destroy
+		@club = Club.find(params[:club_id])
 		@meeting = Meeting.find(params[:id])
-		@club = Board.find(params[:club_id])
 		@meeting.destroy
 		redirect_to club_path(@club)
 	end
