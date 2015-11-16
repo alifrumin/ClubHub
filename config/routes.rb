@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root to: "clubs#index"
+
+  resources :clubs do
+    resources :meetings
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
