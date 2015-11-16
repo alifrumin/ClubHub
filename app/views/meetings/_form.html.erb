@@ -1,0 +1,32 @@
+<%= form_for [@club, @meeting] do |f| %>
+
+  <%= f.label :title %>
+	<%= f.text_field :title %>
+
+  <%= f.label :datetime %>
+	<%= f.text_field :datetime, class: 'field' %>
+
+  <%= f.label :location %>
+	<%= f.text_field :location %>
+
+  <%= f.label :theme %>
+  <%= f.text_field :theme %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.label :host %>
+  <%= f.text_field :host %>
+
+  <%= f.label :invited %>
+  <%= f.text_field :invited %>
+
+  <%= f.label :attending %>
+  <%= f.text_field :attending %>
+
+  <%= f.label :meeting_image %>
+  <%= f.text_field :meeting_image %>
+
+	<%= f.submit 'Submit', class: 'enter' %>
+
+<% end %>

@@ -3,11 +3,8 @@
 <img class='club-photo' src="<%= @club.img_url %>">
 
 <h3>Meetings <%= link_to "(+)", new_club_meeting_path(@club) %></h3>
-<ul>
-  <% @club.meetings.each do |meeting| %>
-    <li>
-      <%= link_to "#{meeting.title}", meeting_path(meeting) %>
-    </li>
-
-  <% end %>
-</ul>
+<% @meetings.each do |meeting| %>
+	<div class="meeting"><%= link_to club_meeting_path(@club, meeting) do %>
+    	<%= image_tag meeting.meeting_image, class: "display" %><% end %>
+	<p><%= meeting.title %></p></div>
+<% end %>
