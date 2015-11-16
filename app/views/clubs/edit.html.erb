@@ -3,3 +3,12 @@
 <%= render 'form' %>
 
 <%= link_to 'Delete!', club_path(@club), method: :delete, class: 'delete' %>
+
+<h2>Edit Membership</h2>
+<%= form_for [@club, @members] do |f| %>
+
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<%= f.submit 'submit', class: 'enter' %>
+<% end %>

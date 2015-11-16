@@ -8,3 +8,8 @@
     	<%= image_tag meeting.meeting_image, class: "display" %><% end %>
 	<p><%= meeting.title %></p></div>
 <% end %>
+
+<h3>Members <%= link_to "(+)", edit_club_path(@club) %></h3>
+<% @members.each do |member| %>
+	<p><%= member.user.email %></p>
+<% end %>

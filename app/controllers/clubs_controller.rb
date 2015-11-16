@@ -30,12 +30,14 @@ class ClubsController < ApplicationController
   def show
     @club = Club.find(params[:id])
     @meetings = @club.meetings
+    @members = Membership.where(params[:user_id])
 
   end
 
   # edit
   def edit
     @club = Club.find(params[:id])
+    @members = Membership.where(params[:user_id])
     # @user = @club.user
     # if @user != current_user
     #   flash[:alert] = "Access denied! You can't edit someone else's pin."
