@@ -9,7 +9,9 @@
 	<p><%= meeting.title %></p></div>
 <% end %>
 
+<%= @members.length %>
+
 <h3>Members <%= link_to "(+)", edit_club_path(@club) %></h3>
-<% @members.each do |member| %>
-	<p><%= member.user.email %></p>
+<% @members.each do |membership| %>
+	<p><%= membership.email %></p></div>
 <% end %>

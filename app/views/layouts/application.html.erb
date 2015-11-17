@@ -11,8 +11,8 @@
     <%= link_to 'ClubHub', new_club_path %>
     <%= link_to 'Clubs', clubs_path %>
       <% if current_user %>
-        Welcome, <%= current_user.email %>
         <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+        <a href="#">Welcome, <%= current_user.email %></a>
       <% else %>
         <%= link_to 'Signup', new_user_registration_path %>
         <%= link_to 'Login', new_user_session_path %>

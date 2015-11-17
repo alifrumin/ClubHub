@@ -22,7 +22,7 @@
   background-color: black;
   color: white;
   font-size: 20px;
-  height: 50px;
+  height: 60px;
   padding: 0px;
   margin: 0px;
   display: flex;
@@ -30,9 +30,8 @@
 
 nav a {
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
   color: white;
-
 }
 
 nav a:hover {
@@ -42,4 +41,27 @@ nav a:hover {
 
 .container {
   margin: 20px;
+}
+
+/*Club Index Page Style*/
+.clubindex {
+  /*position: relative;*/
+  margin: 10px;
+  background-color: yellow;
+  border-bottom: 1px solid black;
+  display: block;
+  clear: both;
+  float: top;
+}
+
+.clubindex:hover {
+  background-color: grey;
+}
+
+img.clubpic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50em;
+  position: relative;
+  border: 3px solid black;
 }

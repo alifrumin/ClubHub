@@ -4,7 +4,7 @@
 	<%= f.text_field :title %>
 
   <%= f.label :datetime %>
-	<%= f.text_field :datetime, class: 'field' %>
+	<%= f.date_field :datetime, class: 'field' %>
 
   <%= f.label :location %>
 	<%= f.text_field :location %>
@@ -13,10 +13,10 @@
   <%= f.text_field :theme %>
 
   <%= f.label :details %>
-  <%= f.text_field :details %>
+  <%= f.text_area :details, size: "60x12" %>
 
   <%= f.label :host %>
-  <%= f.text_field :host %>
+  <%= options_from_collection_for_select(@club.members.all, :user_id, :email) %>
 
   <%= f.label :invited %>
   <%= f.text_field :invited %>
@@ -26,6 +26,7 @@
 
   <%= f.label :meeting_image %>
   <%= f.text_field :meeting_image %>
+
 
 	<%= f.submit 'Submit', class: 'enter' %>
 
