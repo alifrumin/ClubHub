@@ -1,3 +1,8 @@
 <h2> Meeting: <%= @meeting.title %></h2>
 <h3 class ="enter"><%= link_to 'Edit This Meeting', edit_club_meeting_path(@club, @meeting)%></h3>
 <%= image_tag @meeting.meeting_image, class: "meeting_photo" %>
+<%= @meeting.datetime%>
+<%= @meeting.details%>
+<%= @meeting.host%>
+<%= @meeting.invited%>
+<%= @meeting.location%>

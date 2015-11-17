@@ -2,7 +2,6 @@ class ClubsController < ApplicationController
 
   # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 	# before_action :set_post, only: [:show, :edit, :update, :destroy]
-
   # index
   def index
     @clubs = Club.all
@@ -13,7 +12,6 @@ class ClubsController < ApplicationController
     @club = Club.new
     @user = current_user
     @members = Membership.where(params[:user_id])
-
   end
 
   # create

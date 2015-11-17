@@ -1,10 +1,9 @@
 <h3 class="enter"><%= link_to 'Create a New Club', new_club_path %></h3>
-
 <% @clubs.each do |club| %>
 	<div class="clubindex"><%= link_to club_path(club) do %>
-	<%= image_tag club.img_url, class: "clubpic" %>
-	<%= link_to "#{club.name}", club_path(club), class: "clubtext" %>
-	description:<%= club.description %>
+    <%= image_tag club.img_url, class: "clubpic" %><% end %>
+		<div class="descrip"><h2><%= link_to "#{club.name}", club_path(club), class: "clubtext" %></h2>
+		<h2 class= "clubtext">description:<%= club.description %></h2>
 	</div>
-			<% end %>
+</div>
 <% end %>
