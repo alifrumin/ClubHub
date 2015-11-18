@@ -98,13 +98,38 @@ h1 {
   color: white;
   display: inline-block;
   padding: 10px;
+  margin: 5px;
   border-radius: 5px;
   position: absolute;
-  left: 50px;
-  top: 70px;
+  left: 40px;
+  /*top: 70px;*/
 }
 
 .enter a:hover {
   background-color: magenta;
 
+}
+
+.edit a {
+  text-decoration: none;
+  background-color: purple;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.edit a:hover {
+  background-color: magenta;
+}
+
+.clubmeetings {
+  background-color: pink;
+  padding: 10px;
+}
+
+.clubmembers {
+  background-color: yellow;
+  padding: 10px;
 }

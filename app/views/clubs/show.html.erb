@@ -1,17 +1,27 @@
-<h2><%= @club.name %> <%= link_to "(edit)", edit_club_path(@club) %></h2>
+<h1><%= @club.name %> </h1>
 
-<img class='club-photo' src="<%= @club.img_url %>">
-
-<h3>Meetings <%= link_to "(+)", new_club_meeting_path(@club) %></h3>
+<img class='clubpic' src="<%= @club.img_url %>">
+<div class= "descrip"><%=@club.description%></p>
+<p>Number of Members: <%= @members.length %></p>
+</div>
+<div class="clubmeetings">
+<h3>Meetings</h3>
 <% @meetings.each do |meeting| %>
 	<div class="meeting"><%= link_to club_meeting_path(@club, meeting) do %>
     	<%= image_tag meeting.meeting_image, class: "display" %><% end %>
-	<p><%= meeting.title %></p></div>
+	<p><%= meeting.title %></p>
+	<p><%= meeting.datetime %></p>
+</div>
 <% end %>
+</div>
 
-<%= @members.length %>
-
-<h3>Members <%= link_to "(+)", edit_club_path(@club) %></h3>
+<div class="clubmembers">
+<h3>Members</h3>
 <% @members.each do |membership| %>
-	<p><%= membership.email %></p></div>
+	<p><%= membership.email %></p>
 <% end %>
+</div>
+<div class="edit">
+<%= link_to "Edit Club Info", edit_club_path(@club) %>
+<%= link_to "Add a Meeting", new_club_meeting_path(@club) %>
+</div>
