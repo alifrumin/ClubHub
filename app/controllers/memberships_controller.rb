@@ -13,8 +13,6 @@ class MembershipsController < ApplicationController
   #   @club = Club.find(params[:id])
   #   @members = Membership.where(club_id: params[:club_id])
   # end
-
-
   private
   def membership_params
     params.require(:membership).permit(:user_id, :club_id)
