@@ -14,6 +14,11 @@ class MembershipsController < ApplicationController
     @members = Membership.where(club_id: params[:club_id])
   end
 
+def destroy
+  @club = Club.find(params[:id])
+  @membership = @club.membership.destroy(membership_params)
+  redirect_to @membership.club
+end
 
   private
   def membership_params

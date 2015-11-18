@@ -3,7 +3,7 @@
 	<img class='clubshowpic' src="<%= @club.img_url %>">
 	<%=@club.description%></p>
 	<br>
-	<p>Number of Members: <%= @members.length %></p>
+	<p>Number of Members: <%= @memberships.length %></p>
 	<p>Number of Meetings: <%= @meetings.length %></p>
 		<div class="edit">
 			<%= link_to "Edit Club Info", edit_club_path(@club) %><br>
@@ -25,7 +25,7 @@
 
 	<div class="clubmembers">
 	<h3>Members:</h3>
-	<% @members.each do |membership| %>
+	<% @memberships.each do |membership| %>
 		<p><%= membership.email %></p>
 	<% end %>
 	</div>

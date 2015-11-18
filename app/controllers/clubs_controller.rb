@@ -32,14 +32,13 @@ class ClubsController < ApplicationController
   def show
     @club = Club.find(params[:id])
     @meetings = @club.meetings
-    @members = @club.memberships
+    @memberhips = @club.memberships
 
   end
 
   # edit
   def edit
     @club = Club.find(params[:id])
-
     @members = Membership.where(club_id: params[:club_id])
     # @user = @club.user
     # if @user != current_user

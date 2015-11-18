@@ -4,6 +4,6 @@
 
 <h3>Current Members of <%= @club.name%>:</h3>
 <% @club.memberships.each do |membership| %>
-  <p><%= membership.email %></p>
+  <p><%= membership.user.email %></p>
 <% end %>
 </div>
