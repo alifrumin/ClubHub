@@ -6,6 +6,6 @@
   <%= f.text_field :description %><br>
   <%= f.label :img_url %><br>
   <%= f.text_field :img_url %><br>
-
+	<%= f.hidden_field :memberships, value: @founder %>
 	<%= f.submit 'submit', class: "enter"%>
 <% end %>

@@ -12,7 +12,6 @@ class ClubsController < ApplicationController
   def new
     @club = Club.new
     @user = current_user
-    @members = Membership.where(params[:user_id])
 
   end
 
@@ -20,9 +19,11 @@ class ClubsController < ApplicationController
   def create
     @user = current_user
     @club = Club.new(club_params)
-    if @club.save
+    if @club.save!
       flash[:notice] = "#{@club.name} was successfully created."
+      @club.memberships.create!(user: @user)
       redirect_to @club
+
     else
       render :new
     end
@@ -66,9 +67,14 @@ class ClubsController < ApplicationController
     redirect_to clubs_path
   end
 
-  private
+private
+
   def club_params
     params.require(:club).permit(:name, :description, :img_url)
+  end
+
+  def membership_params
+    params.require(:membership).permit(:user_id, :club_id)
   end
 
   def set_post

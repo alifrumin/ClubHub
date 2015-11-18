@@ -26,7 +26,7 @@
 	<div class="clubmembers">
 	<h3>Members:</h3>
 	<% @members.each do |membership| %>
-		<p><%= membership.email %></p>
+		<p><%= membership.user.email %></p>
 	<% end %>
 	</div>
 </div>
