@@ -1,0 +1,9 @@
+<h2>Edit Membership for <%= @club.name%></h2>
+
+<%= render 'form' %>
+
+<h3>Current Members of <%= @club.name%>:</h3>
+<% @club.memberships.each do |membership| %>
+  <p><%= membership.email %></p>
+<% end %>
+</div>

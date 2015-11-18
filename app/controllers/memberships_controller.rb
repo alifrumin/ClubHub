@@ -8,7 +8,13 @@ class MembershipsController < ApplicationController
       render :new
     end
   end
-  
+
+  def edit
+    @club = Club.find(params[:id])
+    @members = Membership.where(club_id: params[:club_id])
+  end
+
+
   private
   def membership_params
     params.require(:membership).permit(:user_id, :club_id)

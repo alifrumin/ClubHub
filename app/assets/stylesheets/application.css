@@ -70,6 +70,13 @@ img.clubpic {
   border: 3px solid black;
   clear: both;
 }
+img.clubshowpic {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  border: 3px solid black;
+  clear: both;
+}
 .descrip {
   clear: both;
   position: relative;
@@ -126,8 +133,8 @@ h1 {
 
 .clubmeetings {
   padding: 10px;
-  border-bottom: dashed grey 2px;
-  border-top: dashed grey 2px;
+  border-bottom: solid black 3px;
+  border-top: solid black 3px;
 }
 
 .clubmembers {
@@ -135,11 +142,11 @@ h1 {
 }
 
 .left {
-  width: 210px;
+  width: 203px;
   display: inline-block;
   clear: both;
-  border-right: dashed grey 2px;
-  border-top: dashed grey 2px;
+  border: solid black 3px;
+
 }
 .right {
   width: 400px;
