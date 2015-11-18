@@ -47,6 +47,10 @@ nav a:hover {
   margin: 20px;
 }
 
+/*footer {
+  background-color: grey;
+  height: 30px;
+}*/
 /*Club Index Page Style*/
 .clubindex {
   /*position: relative;*/
@@ -192,16 +196,14 @@ input.enter {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
 }
-
-
 
 .home {
   background-image: url("treehouse.jpg");
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 600px;
   margin: -20px;
 }

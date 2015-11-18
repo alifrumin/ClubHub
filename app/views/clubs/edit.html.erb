@@ -8,12 +8,12 @@
 <div class="clubmembers">
 <h3>Current Members:</h3>
 <% @club.memberships.each do |members| %>
-	<p><%= members.user.email %></p>
+	<p><%= members.user.email %> <%= link_to "Remove Member".html_safe, members, method: :delete, class: "fav" %></p>
 <% end %>
 </div>
 <%= form_for @club.memberships.build do |f| %>
 	<%= f.label :Users %>
   <%= f.collection_select(:user_id, User.all, :id, :email) %>
   <%= f.hidden_field(:club_id)%>
-	<%= f.submit 'Edit Members', class: 'enter' %>
+	<%= f.submit 'Add Members', class: 'enter' %>
 <% end %>
