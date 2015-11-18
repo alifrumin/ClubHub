@@ -16,7 +16,7 @@
   <%= f.text_area :details, size: "60x12" %>
 
   <%= f.label :host %>
-  <%= options_from_collection_for_select(@club.members.all, :user_id, :email) %>
+  <%= f.text_field :host %>
 
   <%= f.label :invited %>
   <%= f.text_field :invited %>

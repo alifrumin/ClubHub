@@ -14,7 +14,7 @@
  *= require_self
  */
  * {
-   margin: 0px;
+  margin: 0px;
   padding: 0px;
  }
 /*NAV Styling*/
@@ -26,6 +26,10 @@
   padding: 0px;
   margin: 0px;
   display: flex;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav a {
@@ -47,15 +51,15 @@ nav a:hover {
 .clubindex {
   /*position: relative;*/
   margin: 10px;
-  background-color: yellow;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   display: block;
   clear: both;
   float: top;
+  height: 230px;
 }
 
 .clubindex:hover {
-  background-color: grey;
+
 }
 
 img.clubpic {
@@ -64,4 +68,43 @@ img.clubpic {
   border-radius: 50em;
   position: relative;
   border: 3px solid black;
+  clear: both;
+}
+.descrip {
+  clear: both;
+  position: relative;
+  left: 220px;
+  bottom: 200px;
+  font-size: 30px;
+  width: 400px;
+}
+
+.clubtext {
+  clear: both;
+  float: left;
+  position: relative;
+  font-weight: bolder;
+  font-size: 40px;
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.enter a {
+  text-decoration: none;
+  background-color: purple;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50px;
+  top: 70px;
+}
+
+.enter a:hover {
+  background-color: magenta;
+
 }
