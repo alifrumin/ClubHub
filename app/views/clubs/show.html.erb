@@ -3,7 +3,12 @@
 	<img class='clubshowpic' src="<%= @club.img_url %>">
 	<%=@club.description%></p>
 	<br>
-	<p>Number of Members: <%= @members.length %></p>
+	<p>Members:</p>
+	<ol><% @members.each do |members| %>
+		<li><%= members.user.email %></li>
+	<% end %></ol>
+	<br>
+	<p>Total Members: <%= @members.length %></p>
 	<p>Number of Meetings: <%= @meetings.length %></p>
 		<div class="edit">
 			<%= link_to "Edit Club Info", edit_club_path(@club) %><br>
@@ -16,15 +21,11 @@
 	<% @meetings.each do |meeting| %>
 		<div class="meeting"><%= link_to club_meeting_path(@club, meeting) do %>
 	  <%= meeting.title%><% end %>
-		<%= meeting.datetime %>
+		<p>Date: <%= meeting.datetime %></p>
+		<p>Location: <%= meeting.location%></p>
+		<p>Theme: <%= meeting.theme%></p>
+		<img class='meetingshowpic' src="<%= meeting.meeting_image %>">
 	</div>
-	<% end %>
-	</div>
-
-	<div class="clubmembers">
-	<h3>Members:</h3>
-	<% @members.each do |members| %>
-		<p><%= members.user.email %></p>
 	<% end %>
 	</div>
 </div>

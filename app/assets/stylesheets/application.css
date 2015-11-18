@@ -207,3 +207,7 @@ input.enter {
   height: 600px;
   margin: -20px;
 }
+
+li {
+  margin-left: 20px;
+}
