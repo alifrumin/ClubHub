@@ -12,7 +12,6 @@ http://www.the-art-of-web.com/css/textoverimage/
 
 Silver:
 Things to do:
-1. set up delete for memberships think about best way to display
 2. make it so users can only be added to a club one time
 3. Users permission
 4. Deploy to heroku

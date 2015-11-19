@@ -13,14 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+ /*color palette
+ beige #F1F0D2
+ blush #E04A63
+ light pink #FDC9B4
+ blue #3E425D
+ an oldie #AE5051
+ http://www.colourlovers.com/palette/3934437/a_better_person*/
+
+
  * {
   margin: 0px;
   padding: 0px;
  }
 /*NAV Styling*/
  nav {
-  background-color: black;
-  color: white;
+  background-color: #AE5051;
+  color: #3E425D;
   font-size: 20px;
   height: 60px;
   padding: 0px;
@@ -35,18 +45,22 @@ a {
 nav a {
   text-decoration: none;
   padding: 20px;
-  color: white;
+  color: #FDC9B4;
 }
-
+ nav p {
+   padding: 20px;
+ }
 nav a:hover {
-  color: #A8003B;
-  background-color: blue;
+  color: #E04A63;
+  background-color: #FDC9B4;
 }
 
 .container {
   margin: 20px;
 }
-
+body {
+  background-color: #F1F0D2;
+}
 /*footer {
   background-color: grey;
   height: 30px;
@@ -71,7 +85,7 @@ img.clubpic {
   width: 200px;
   border-radius: 50em;
   position: relative;
-  border: 3px solid black;
+  /*border: 3px solid black;*/
   clear: both;
 }
 img.clubshowpic {
@@ -101,12 +115,17 @@ img.clubshowpic {
 
 h1 {
   text-align: center;
+  color: #AE5051;
+}
+h2 {
+  text-align: center;
+  color: #AE5051;
 }
 
 .enter a {
   text-decoration: none;
-  background-color: purple;
-  color: white;
+  background-color: #AE5051;
+  color: #FDC9B4;
   display: inline-block;
   padding: 10px;
   margin: 5px;
@@ -117,14 +136,15 @@ h1 {
 }
 
 .enter a:hover {
-  background-color: magenta;
+  background-color: #FDC9B4;
+  color: #E04A63;
 
 }
 
 .edit a {
   text-decoration: none;
-  background-color: purple;
-  color: white;
+  background-color: #AE5051;
+  color: #FDC9B4;
   display: inline-block;
   padding: 10px;
   margin: 5px;
@@ -132,7 +152,8 @@ h1 {
 }
 
 .edit a:hover {
-  background-color: magenta;
+  background-color: #FDC9B4;
+  color: #E04A63;
 }
 
 .clubmeetings {
@@ -165,13 +186,16 @@ h1 {
 
 a {
   font-weight: bold;
-  color: dodgerblue;
+  color: #3E425D;
 }
 
+a:hover {
+  text-decoration: underline;
+}
 input.enter {
   text-decoration: none;
-  background-color: purple;
-  color: white;
+  background-color: #AE5051;
+  color: #FDC9B4;
   display: inline-block;
   padding: 10px;
   margin: 5px;
@@ -182,6 +206,10 @@ input.enter {
   font-weight: bold;
 }
 
+input.enter:hover {
+  background-color: #FDC9B4;
+  color: #E04A63;
+}
 .flashnotices {
   height: 40px;
 }
