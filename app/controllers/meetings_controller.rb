@@ -7,7 +7,7 @@ class MeetingsController < ApplicationController
 	end
 
 	def new
-		@club = Club.find(params[:club_id])
+		@club = Club.find(params[:club_id]) #DRY up make before_action
 		# @user = @club.user
 		@meeting = Meeting.new
 		# if @user != current_user
@@ -24,7 +24,7 @@ class MeetingsController < ApplicationController
 
 	def show
 		@club = Club.find(params[:club_id])
-		@meeting = Meeting.find(params[:id])
+		@meeting = Meeting.find(params[:id]) #before_action to make DRY
 		# @user = @club.user
 	end
 

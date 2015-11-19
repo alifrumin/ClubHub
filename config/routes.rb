@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "clubs#index"
-  resources :memberships
+  resources :memberships #only have create and destroy actions in memberships controller
+  # so do not need the extra routes created by using resources :memberships
+  # can specify which routes to create Ex.  resources :memberships, only: [:show, :new]
   resources :clubs do
     resources :meetings
   end
+  # I would delete all of the comments below since they are not needed
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

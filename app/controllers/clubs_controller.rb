@@ -11,7 +11,7 @@ class ClubsController < ApplicationController
   # new
   def new
     @club = Club.new
-    @user = current_user
+    @user = current_user #have this in multiple actions, could make another before_action
 
   end
 
@@ -39,7 +39,7 @@ class ClubsController < ApplicationController
 
   # edit
   def edit
-    @club = Club.find(params[:id])
+    @club = Club.find(params[:id]) #remove since have before_action
 
     @members = Membership.where(club_id: params[:club_id])
     # @user = @club.user

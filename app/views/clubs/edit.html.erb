@@ -10,7 +10,7 @@
 </div>
 <%= form_for @club.memberships.build do |f| %>
 	<%= f.label :Users %>
-  <%= f.collection_select(:user_id, User.all, :id, :email) %>
+  <%= f.collection_select(:user_id, User.all, :id, :email) %> 
   <%= f.hidden_field(:club_id)%>
 	<%= f.submit 'Add Members', class: 'enter' %>
 <% end %>

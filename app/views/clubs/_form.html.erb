@@ -1,6 +1,6 @@
 <%= form_for @club do |f| %>
 
-	<%= f.label :name %><br>
+	<%= f.label :name %><br> <%# not sure if using <br> is best practice, css might also work. dont think it is a big deal though %>
 	<%= f.text_field :name %><br>
   <%= f.label :description %><br>
   <%= f.text_field :description %><br>
