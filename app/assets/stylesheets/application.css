@@ -76,10 +76,6 @@ body {
   height: 230px;
 }
 
-.clubindex:hover {
-
-}
-
 img.clubpic {
   height: 200px;
   width: 200px;
@@ -92,9 +88,22 @@ img.clubshowpic {
   height: 200px;
   width: 200px;
   position: relative;
-  border: 3px solid black;
+  /*border: 3px solid black;*/
   clear: both;
+  /*display: flex;*/
 }
+
+.clubinfo {
+  display: inline-flex;
+  padding: 10px;
+  width: 100%;
+}
+
+.text {
+  padding: 0px 20px 20px 20px;
+  width: 60%;
+}
+
 .descrip {
   clear: both;
   position: relative;
@@ -210,8 +219,27 @@ input.enter:hover {
   background-color: #FDC9B4;
   color: #E04A63;
 }
-.flashnotices {
-  height: 40px;
+
+.flash {
+
+  display: inline-block;
+  padding: 30px;
+  position: absolute;
+  margin: auto;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+.notice {
+  background-color: rgba(255,255,255,.7);
+  color: #3E425D;
+}
+
+.alert {
+  background-color: rgba(255,255,255,.7);
+  color: #3E425D;
 }
 
 .signup {
@@ -238,4 +266,8 @@ input.enter:hover {
 
 li {
   margin-left: 20px;
+}
+
+.links {
+  text-align: center;
 }
