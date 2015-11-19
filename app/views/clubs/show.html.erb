@@ -28,8 +28,7 @@
       	<div class="meeting">
 	        <%= link_to club_meeting_path(@club, meeting) do %>
 	        <%= meeting.title%>
-				<% end %>,
-        <%= meeting.datetime %>,
-        <%= meeting.location%>
+				<% end %>
+        <%= meeting.date %>
       </div>
       <% end %>

@@ -12,13 +12,15 @@ http://www.the-art-of-web.com/css/textoverimage/
 
 Silver:
 Things to do:
-2. make it so users can only be added to a club one time
-3. Users permission
-4. Deploy to heroku
+1. set up carrierwave
+2. change membership add/delete system to be more user friendly
+3. play with dif form entries... date/time/check box..
+4. change format of date displayed
 5. css
-  a) color scheme
-  b) consistent hover states... links vs inputs
-  c) flexbox or clear fix or something so that flashnotices are displayed better
-  d) cover page
-6. comment your code!
-7. revise meetings fields
+  c) something so that flash notices are displayed better
+  d) meeting show
+  e) club show
+6. add name to user
+7. make host a user field
+8. make sure images don't get distorted
+9. membership auth...Can can
