@@ -1,31 +1,35 @@
 <h1><%= @club.name %></h1>
 <div class="clubinfo">
-	<img class='clubshowpic' src="<%= @club.img_url %>">
-	<div class="text">
-<p><%=@club.description%><p>
-<br>
-	<h4>Members:</h4>
-	<ol>
-		<% @members.each do |members| %>
-			<li><%= members.user.email %></li>
-			<% end %>
-		</ol>
-		<br>
-	<p>Total Members: <%= @members.length %></p>
-	<p>Number of Meetings: <%= @meetings.length %></p>
-</div>
-		<div class="edit">
-			<%= link_to "Edit Club Info", edit_club_path(@club) %><br>
-			<%= link_to "Add a Meeting", new_club_meeting_path(@club) %><br>
-		</div>
-		</div>
-		<div class="meetingsindex">
-	<h2>Meetings</h2>
-	<% @meetings.each do |meeting| %>
-		<div class="meeting">
-		<!-- <img class='meetingshowpic' src="<%= meeting.meeting_image %>"> -->
-		<%= link_to club_meeting_path(@club, meeting) do %>
-	  <%= meeting.title%><% end %>, Date: <%= meeting.datetime %>, <%= meeting.location%>
+  <img class='clubshowpic' src="<%= @club.img_url %>">
+  <div class="text">
+    <p><%= @club.description %></p>
+        <br>
+        <h4>Members:</h4>
+        <ol>
+          <% @members.each do |members| %>
+          <li><%= members.user.email %></li>
+          <% end %>
+        </ol>
+        <br>
+        <p>Total Members:
+          <%= @members.length %></p>
+        <p>Number of Meetings:
+          <%= @meetings.length %></p>
+      </div>
+      <div class="edit">
+        <%= link_to "Edit Club Info", edit_club_path(@club) %>
+        <%= link_to "Add a Meeting", new_club_meeting_path(@club) %><br>
+      </div>
+    </div>
+    <div class="meetingsindex">
+      <h2>Meetings</h2>
 
-	</div>
-	<% end %>
+      <% @meetings.each do |meeting| %>
+      	<div class="meeting">
+	        <%= link_to club_meeting_path(@club, meeting) do %>
+	        <%= meeting.title%>
+				<% end %>,
+        <%= meeting.datetime %>,
+        <%= meeting.location%>
+      </div>
+      <% end %>

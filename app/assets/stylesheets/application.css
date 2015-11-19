@@ -22,7 +22,6 @@
  an oldie #AE5051
  http://www.colourlovers.com/palette/3934437/a_better_person*/
 
-
  * {
   margin: 0px;
   padding: 0px;
@@ -84,6 +83,7 @@ img.clubpic {
   /*border: 3px solid black;*/
   clear: both;
 }
+
 img.clubshowpic {
   height: 200px;
   width: 200px;
@@ -232,7 +232,7 @@ input.enter:hover {
   left: 0;
 
 }
-.notice {
+/*.notice {
   background-color: rgba(255,255,255,.7);
   color: #3E425D;
 }
@@ -240,7 +240,7 @@ input.enter:hover {
 .alert {
   background-color: rgba(255,255,255,.7);
   color: #3E425D;
-}
+}*/
 
 .signup {
   background-color: rgba(255,255,255,.7);
