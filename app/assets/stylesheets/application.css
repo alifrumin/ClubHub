@@ -26,6 +26,89 @@
   margin: 0px;
   padding: 0px;
  }
+
+ .container {
+   margin: 20px;
+ }
+
+ a {
+    font-weight: bold;
+    color: #3E425D;
+    text-decoration: none;
+  }
+
+ a:hover {
+    text-decoration: underline;
+  }
+
+ body {
+   background-color: #F1F0D2;
+ }
+
+ h1 {
+   text-align: center;
+   color: #AE5051;
+ }
+
+ h2 {
+   text-align: center;
+   color: #AE5051;
+ }
+
+ /*buttons*/
+ .enter a {
+   text-decoration: none;
+   background-color: #AE5051;
+   color: #FDC9B4;
+   display: inline-block;
+   padding: 10px;
+   margin: 5px;
+   border-radius: 5px;
+   position: absolute;
+   left: 40px;
+ }
+
+ .enter a:hover {
+   background-color: #FDC9B4;
+   color: #E04A63;
+ }
+
+ .edit a {
+   text-decoration: none;
+   background-color: #AE5051;
+   color: #FDC9B4;
+   display: inline-block;
+   padding: 10px;
+   margin: 5px;
+   border-radius: 5px;
+ }
+
+ .edit a:hover {
+   background-color: #FDC9B4;
+   color: #E04A63;
+ }
+
+ input.enter {
+   text-decoration: none;
+   background-color: #AE5051;
+   color: #FDC9B4;
+   display: inline-block;
+   padding: 10px;
+   margin: 5px;
+   border-radius: 5px;
+   border: none;
+   font-size: 1.17em;
+   font-family: serif;
+   font-weight: bold;
+ }
+
+ input.enter:hover {
+   background-color: #FDC9B4;
+   color: #E04A63;
+ }
+
+
+
 /*NAV Styling*/
  nav {
   background-color: #AE5051;
@@ -37,36 +120,23 @@
   display: flex;
 }
 
-a {
-  text-decoration: none;
-}
-
 nav a {
   text-decoration: none;
   padding: 20px;
   color: #FDC9B4;
 }
+
  nav p {
    padding: 20px;
  }
+
 nav a:hover {
   color: #E04A63;
   background-color: #FDC9B4;
 }
 
-.container {
-  margin: 20px;
-}
-body {
-  background-color: #F1F0D2;
-}
-/*footer {
-  background-color: grey;
-  height: 30px;
-}*/
 /*Club Index Page Style*/
 .clubindex {
-  /*position: relative;*/
   margin: 10px;
   border-bottom: 1px solid grey;
   display: block;
@@ -80,17 +150,24 @@ img.clubpic {
   width: 200px;
   border-radius: 50em;
   position: relative;
-  /*border: 3px solid black;*/
   clear: both;
 }
 
+.descrip {
+  clear: both;
+  position: relative;
+  left: 220px;
+  bottom: 200px;
+  font-size: 30px;
+  width: 400px;
+}
+
+/*ClubShowPage*/
 img.clubshowpic {
   height: 200px;
   width: 200px;
   position: relative;
-  /*border: 3px solid black;*/
   clear: both;
-  /*display: flex;*/
 }
 
 .clubinfo {
@@ -104,144 +181,36 @@ img.clubshowpic {
   width: 60%;
 }
 
-.descrip {
-  clear: both;
-  position: relative;
-  left: 220px;
-  bottom: 200px;
-  font-size: 30px;
-  width: 400px;
+li {
+  margin-left: 20px;
 }
 
-.clubtext {
-  clear: both;
-  float: left;
-  position: relative;
-  font-weight: bolder;
-  font-size: 40px;
-  width: 400px;
-}
-
-h1 {
-  text-align: center;
-  color: #AE5051;
-}
-h2 {
-  text-align: center;
-  color: #AE5051;
-}
-
-.enter a {
-  text-decoration: none;
-  background-color: #AE5051;
-  color: #FDC9B4;
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  position: absolute;
-  left: 40px;
-  /*top: 70px;*/
-}
-
-.enter a:hover {
-  background-color: #FDC9B4;
-  color: #E04A63;
-
-}
-
-.edit a {
-  text-decoration: none;
-  background-color: #AE5051;
-  color: #FDC9B4;
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-.edit a:hover {
-  background-color: #FDC9B4;
-  color: #E04A63;
-}
-
-.clubmeetings {
-  padding: 10px;
-  border-bottom: solid black 3px;
-  border-top: solid black 3px;
-  position: relative;
-
-}
-
-.clubmembers {
-  padding: 10px;
-}
-
-.left {
-  width: 203px;
-  display: inline-block;
-  clear: both;
-  /*border: solid black 3px;*/
-
-}
-.right {
-  width: 400px;
-  display: inline-block;
-  clear: both;
-  position: absolute;
-  top: 160px;
-  left: 250px;
-}
-
-a {
-  font-weight: bold;
-  color: #3E425D;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-input.enter {
-  text-decoration: none;
-  background-color: #AE5051;
-  color: #FDC9B4;
-  display: inline-block;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: none;
-  font-size: 1.17em;
-  font-family: serif;
-  font-weight: bold;
-}
-
-input.enter:hover {
-  background-color: #FDC9B4;
-  color: #E04A63;
-}
-
+/*flashnotices*/
 .flash {
-
+  /*background-color: rgba(255,255,255,.7);*/
   display: inline-block;
-  padding: 30px;
+  padding: 10px;
   position: absolute;
-  margin: auto;
-  top: 50px;
+  margin: 10px;
+  top: 40px;
   right: 0;
   bottom: 0;
   left: 0;
-
+  height: 10px;
 }
-/*.notice {
+
+.notice {
   background-color: rgba(255,255,255,.7);
   color: #3E425D;
+  margin:10px;
 }
 
 .alert {
   background-color: rgba(255,255,255,.7);
   color: #3E425D;
-}*/
-
+  margin: 10px;
+}
+/*Sign up and login page*/
 .signup {
   background-color: rgba(255,255,255,.7);
   display: inline-block;
@@ -262,10 +231,6 @@ input.enter:hover {
   background-size: cover;
   height: 600px;
   margin: -20px;
-}
-
-li {
-  margin-left: 20px;
 }
 
 .links {
