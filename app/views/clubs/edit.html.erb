@@ -6,6 +6,7 @@
 <h3>Current Members:</h3>
 <% @club.memberships.each do |members| %>
 	<p><%= members.user.email %> <%= link_to "Remove Member".html_safe, members, method: :delete, class: "fav" %></p>
+	<!-- ERICA: Was there a particular error that you encountered that prompted use of .html_safe here? -->
 <% end %>
 </div>
 <%= form_for @club.memberships.build do |f| %>
@@ -14,3 +15,5 @@
   <%= f.hidden_field(:club_id)%>
 	<%= f.submit 'Add Members', class: 'enter' %>
 <% end %>
+<!-- ERICA: You could save some duplication by rendering '../memberships/form' instead of writing out the whole form -->
+<!-- ERICA: Adding checkboxes that allow multiple selections turns out to be a pretty fiddly process in terms of data structure. Instead of the handy and efficient colletion_select, you would likely have to use a loop/enumerable to generate a separate checkbox for each user. This apidock post would be a good place to start if you want to try to refactor... http://apidock.com/rails/ActionView/Helpers/FormHelper/check_box#1001-Sending-array-parameters-->
