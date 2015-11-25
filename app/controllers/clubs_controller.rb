@@ -23,7 +23,7 @@ class ClubsController < ApplicationController
       flash[:notice] = "#{@club.name} was successfully created."
       @club.memberships.create!(user: @user)
       redirect_to @club
-
+      # ERICA: This ended up being a really nice piece of user experience-oriented programming, and elegantly executed after all the roadblocks.
     else
       render :new
     end
@@ -42,6 +42,8 @@ class ClubsController < ApplicationController
     @club = Club.find(params[:id])
 
     @members = Membership.where(club_id: params[:club_id])
+    # ERICA: Don't forget to delete any commented-out code that you're not using
+
     # @user = @club.user
     # if @user != current_user
     #   flash[:alert] = "Access denied! You can't edit someone else's pin."
