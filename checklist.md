@@ -59,3 +59,5 @@
 One bug that I encountered as a user -- the date doesn't seem to be rendering properly on the meeting show page or the club index page. Adding a formatting/parsing method to the meeting model might help iron this out.
 
 The next steps list in your readme is great! Your use of join tables is solid here, so I'd particularly encourage you to implement the themes model you had mentioned. It seems like you're really getting into the nitty gritty of customizing forms, both in the work you've done and the work you're hoping to do -- they can be a pain sometimes, but they're central to happy users and happy databases, so that's something that should be exciting to potential employers...  
+
+[Inline Code Comments](https://github.com/ebirving/ClubHub/compare/9a52a1f...696fff3)
