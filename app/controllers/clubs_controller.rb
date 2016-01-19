@@ -12,7 +12,6 @@ class ClubsController < ApplicationController
   def new
     @club = Club.new
     @user = current_user
-
   end
 
   # create
@@ -23,7 +22,6 @@ class ClubsController < ApplicationController
       flash[:notice] = "#{@club.name} was successfully created."
       @club.memberships.create!(user: @user)
       redirect_to @club
-
     else
       render :new
     end
@@ -34,19 +32,12 @@ class ClubsController < ApplicationController
     @club = Club.find(params[:id])
     @meetings = @club.meetings
     @members = @club.memberships
-
   end
 
   # edit
   def edit
     @club = Club.find(params[:id])
-
     @members = Membership.where(club_id: params[:club_id])
-    # @user = @club.user
-    # if @user != current_user
-    #   flash[:alert] = "Access denied! You can't edit someone else's pin."
-    #   redirect_to clubs_path
-    # end
   end
 
   # update
